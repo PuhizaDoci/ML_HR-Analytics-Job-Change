@@ -40,23 +40,23 @@ Notebook-u përmban kodin për të gjithë projektin, i ndarë në seksione të 
 2.  Përpunimi i të dhënave:
 
     -   Kryhen hapat e pastrimit dhe përpunimit të të dhënave për të trajtuar vlerat e humbura dhe transformuar tiparet kategorike në paraqitje numerike.
-    -   Tiparet kategorike mbushen me vlerën modë, ndërsa tiparet ordinalë enkodohen duke përdorur kategoritë e dhëna ordinalë.
+    -   Tiparet kategorike mbushen me vlerën mesatare (mode), ndërsa tiparet ordinal enkodohen.
     -   Kryhet shkallëzimi i tipareve numerike duke përdorur StandardScaler nga skit-learn.
-    -   Variabla e synuar enkodohet si numra të plotë.
+    -   Variablat e synuara enkodohen si numra të plotë.
     -   Tiparet nominale enkodohen me one-hot encoding duke përdorur pd.get_dummies().
 
 3.  Trajnimi dhe vlerësimi i modelit:
 
     -   Dataseti ndahet në pjesën e trajnimit dhe pjesën e testimi duke përdorur funksionin train_test_split().
-    -   Inicializohet Klasifikuesi Random Forest, trajnohet në pjesën e trajnimit dhe përdoret për të bërë parashikime në pjesën e testimi.
-    -   Llogaritet saktesia, matrica e konfuzionit dhe raporti i klasifikimit për të vlerësuar performancën e modelit.
+    -   Inicializohet klasifikuesi Random Forest, trajnohet në pjesën e trajnimit dhe përdoret për të bërë parashikime në pjesën e testimi.
+    -   Llogaritet saktesia, confusion matrix dhe raporti i klasifikimit për të vlerësuar performancën e modelit.
 
 4.  Model Tuning dhe krahasimi i modeleve:
 
-    -   Përdoret GridSearchCV për të kryer një kërkim të hiperparametrave për Klasifikuesin Random Forest.
-    -   Merrin hiperparametrat më të mira dhe përdoren për të trajnuar një Klasifikues të ri Random Forest.
-    -   Modeli i perfeksionuar vlerësohet duke përdorur validim të kryqëzuar dhe krahasohet me klasifikues të tjerë, si Regresioni Logjistik, K-Neighbor më të Afërt, Mbështetësi i Vektorëve, dhe Rrjetat Neuronale.
-    -   Llogariten dhe shfaqen metrikat e performancës (saktesia, matrica e konfuzionit, raporti i klasifikimit) për secilin klasifikues.
+    -   Përdoret GridSearchCV për të kryer një kërkim të hiperparametrave për klasifikuesin Random Forest.
+    -   Merren hiperparametrat më të mira dhe përdoren për të trajnuar një klasifikues të ri Random Forest.
+    -   Modeli "tuned" vlerësohet duke përdorur validim të kryqëzuar dhe krahasohet me klasifikues të tjerë, si Logistic Regression, K-Nearest Neighbors, Support Vector Machine, dhe Neural Network.
+    -   Llogariten dhe shfaqen metrikat e performancës (saktesia, confusion matrix, raporti i klasifikimit) për secilin klasifikues.
 
 ### Ekzekutimi
 
